@@ -17,7 +17,7 @@ export const DrinkSearch = ({ onClick }) => {
 	return (
 		<>
 			<label>Search for drinks:</label>
-			<TextInput onChange={handleChange} />
+			<TextInput  onChange={handleChange} w={200} mb={8} />
 			<DrinkItems onClick={onClick} drinks={matchedDrinks} />
 		</>
 	);

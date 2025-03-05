@@ -2,6 +2,7 @@ import { useState } from 'react';
 import './App.css';
 import { DrinkChoice } from './components/DrinkChoice';
 import { DrinkSearch } from './components/DrinkSearch';
+import { Heading } from '@chakra-ui/react';
 
 export const App = () => {
 	const [userDrink, setUserDrink] = useState();
@@ -14,8 +15,8 @@ export const App = () => {
 				<DrinkChoice drink={userDrink} onClick={setUserDrink} />
 			) : (
 				<>
-					<h1>{greeting}</h1>
-					<DrinkSearch onClick={setUserDrink} />
+					<Heading mb={8} size="3xl"  color="blue.700">{greeting}</Heading>
+					<DrinkSearch  onClick={setUserDrink} />
 				</>
 			)}
 		</div>
