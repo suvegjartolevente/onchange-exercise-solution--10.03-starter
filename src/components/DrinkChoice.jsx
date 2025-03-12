@@ -20,7 +20,9 @@ export const DrinkChoice = ({ drink, onClick }) => {
       <img src={drink.imgUrl} width={100} height={100} alt={drink.alt} />
       <p>Your drink will be ready in a few minutes</p>
       <Button text={"Change selection"} onClick={() => onClick()} />
-      <ModalButton  onClick={onOpen}>Open Modal</ModalButton>
+      <ModalButton text={"Validation"} onClick={onOpen}>
+        Open Modal
+      </ModalButton>
 
       <Modal isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
@@ -28,19 +30,23 @@ export const DrinkChoice = ({ drink, onClick }) => {
           <ModalHeader>Modal Title</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
-            <Text count={2} />{" "}
+            <Text count={2} />
+            {"Please validate your choice"}
           </ModalBody>
 
           <ModalFooter>
             <ModalButton
-              color="red"
+              text={"Cancel"}
+              
               variantColor="red"
               mr={3}
               onClick={onClose}
             >
               Close
             </ModalButton>
-            <ModalButton variant="ghost">Secondary Action</ModalButton>
+            <ModalButton text={"Approve"} >
+              Secondary Action
+            </ModalButton>
           </ModalFooter>
         </ModalContent>
       </Modal>
