@@ -1,0 +1,7 @@
+.DrinkItems {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  justify-content: center; /* Centers items */
+  gap: 16px; /* Adjust spacing between items */
+ 
+}
