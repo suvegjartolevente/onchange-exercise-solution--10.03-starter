@@ -1,11 +1,11 @@
-import { DrinkItem } from "./DrinkItem";
 
 
-export const OrderConfirmed= ({ drink, onClick}) => {
-  
+export const OrderConfirmed = ({ drink }) => {
   return (
     <>
-    <DrinkItem  key={drink.id} drink={drink} onClick={onClick} />
+      <h1 >Your : {drink.name} is coming</h1>
+      <img src={drink.imgUrl} width={300} height={300} alt={drink.alt} />
+      <p>Your drink will be ready in a few minutes</p>
     </>
-	);
+  );
 };
