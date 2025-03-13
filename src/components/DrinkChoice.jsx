@@ -50,10 +50,10 @@ export const DrinkChoice = ({ drink, onClick }) => {
               </ModalBody>
 
               <ModalFooter>
-                <ModalButton text={"Cancel"} colorScheme="red" mr={3} onClick={onClose}>
+                <ModalButton text={"Cancel"}  mr={3} onClick={onClose}>
                   Close
                 </ModalButton>
-                <ModalButton text={"Approve"} onClick={handleConfirm}>
+                <ModalButton text={"Approve"} variant="ghost" onClick={handleConfirm}>
                   Approve
                 </ModalButton>
               </ModalFooter>
